@@ -18,6 +18,7 @@ function foo() {
         
         var principle = $("#principle").val();
         var buyingDate = new Date($("#buyingDate").val());
+        var buyingYear = buyingDate.getFullYear();
         var noYears = $("#noYears").val();
         var interestYear = $("#interestYear").val();
         var endAmount = $("#endAmount").val();
@@ -28,6 +29,7 @@ function foo() {
         
         console.log("principle: " + principle);
         console.log("buying date: " + buyingDate);
+        console.log("buying year: " + buyingYear);
         console.log("Number of years: " + noYears);
         console.log("Interest of Year:" + interestYear);
         console.log("Returned Amount: " + endAmount);
