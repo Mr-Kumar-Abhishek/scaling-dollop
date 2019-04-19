@@ -17,7 +17,7 @@ function foo() {
     $("#calculate").click(function(){
         
         var principle = $("#principle").val();
-        var buyingDate = $("#buyingDate").val();
+        var buyingDate = new Date($("#buyingDate").val());
         var noYears = $("#noYears").val();
         var interestYear = $("#interestYear").val();
         var endAmount = $("#endAmount").val();
