@@ -1,0 +1,13 @@
+{
+  "name": "scaling-dollop",
+  "short_name": "Scaling Dollop",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A simple FII rate calculator",
+  "icons": [{
+    "src": "img/sd.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }]
+}
