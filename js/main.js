@@ -44,6 +44,7 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
                 console.log("current guessed rate: " + guessedRate);
                 resultAmount = compounder(principle, yearNo, guessedRate, yearInterest);
                 console.log("current resultAmount: ", + resultAmount);
+                console.log("amountEnd: ", + amountEnd);
         }
         return guessedRate;
 }
