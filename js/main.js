@@ -23,7 +23,7 @@ function si_rate_calculate(principle, yearNo, si){
 function compounder(principle, yearNo, guessedRate, yearInterest){
         var compounding = principle;
         for (i = 0; i < yearNo; i++){
-                compounding = ((compounding*guessedRate) - yearInterest);
+                compounding = ((compounding*guessedRate + compounding) - yearInterest);
         }
         return compounding;
 }
