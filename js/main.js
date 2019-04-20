@@ -19,8 +19,9 @@ function foo() {
         var principle = $("#principle").val();
         var buyingDate = new Date($("#buyingDate").val());
         var buyingYear = buyingDate.getFullYear();
+        var buyingTime = buyingDate.getTime();
         var finYear = buyingYear + 1;
-        var finDate = new Date("March 31, " + finYear + " 00:00:00");
+        var finDate = new Date("March 31, " + finYear + " " + buyingTime);
         var noYears = $("#noYears").val();
         var interestYear = $("#interestYear").val();
         var endAmount = $("#endAmount").val();
