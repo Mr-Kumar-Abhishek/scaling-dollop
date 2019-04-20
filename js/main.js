@@ -32,7 +32,7 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
         guessedRate = estimatedRate;
         console.log("estimatedRate: ", + estimatedRate);
         
-        resultAmount = 0;
+        resultAmount = 1;
         while(resultAmount.toFixed(6) != amountEnd.toFixed(6)){
                 if( resultAmount.toFixed(6) < amountEnd.toFixed(6)){
                         guessedRate = guessedRate + 0.0000000000000001;
