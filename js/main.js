@@ -20,6 +20,31 @@ function si_rate_calculate(principle, yearNo, si){
         return si_rate_result;
 }
 
+function compounder(principle, yearNo, guessedRate, yearInterest){
+        var compounding = principle;
+        for (i = 0; i < yearNo; i++){
+                compounding = ((compounding*guessedRate) - yearInterest);
+        }
+        return compounding;
+}
+
+function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
+        guessedRate = estimatedRate;
+        resultAmount = 0;
+        while(resultAmount != amountEnd){
+                if( resultAmount < amountEnd){
+                        guessedRate = guessedRate + 0.000001;
+                }else if(resultAmount > amountEnd){
+                        guessedRate = guessedRate - 0.000001;
+                }else {
+                        break;
+                }
+                console.log("current guessed rate: " + guessedRate);
+                resultAmount = compounder(principle, yearNo, guessedRate, yearInterest);
+        }
+        return guessedRate;
+}
+
 function foo() {
     console.clear();
     console.log("foo worked ... Yay ?");
@@ -39,8 +64,10 @@ function foo() {
         var r2 = r2_calculate(r1, noYears, principle);
         var si_total = i_calculate(principle, endAmount);
         var si_total_rate = (principle, noYears, si_total);
+        var rate = guesser(principle, noYears, r2, interestYear, endAmount);
+        var rate_percent = rate*100;
         
-        $("#rate").val(si_total_rate.toFixed(6));
+        $("#rate").val(rate_percent.toFixed(6));
         
         console.log("principle: " + principle);
         console.log("buying date: " + buyingDate);
@@ -54,6 +81,7 @@ function foo() {
         console.log("Rate 2: " + r2.toFixed(6));
         console.log("SI total: " + si_total.toFixed(6)); 
         console.log("SI rate: " + si_total_rate.toFixed(6));
+        console.log("Rate Percent: " + rate_percent.toFixed(6));
     });
 }
 
