@@ -30,17 +30,20 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
 
 function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
         guessedRate = estimatedRate;
+        console.log("estimatedRate: ", + estimatedRate);
+        
         resultAmount = 0;
         while(resultAmount != amountEnd){
                 if( resultAmount < amountEnd){
-                        guessedRate = guessedRate + 0.000001;
+                        guessedRate = guessedRate + 0.0000000000000001;
                 }else if(resultAmount > amountEnd){
-                        guessedRate = guessedRate - 0.000001;
+                        guessedRate = guessedRate - 0.0000000000000001;
                 }else {
                         break;
                 }
                 console.log("current guessed rate: " + guessedRate);
                 resultAmount = compounder(principle, yearNo, guessedRate, yearInterest);
+                console.log("current resultAmount: ", + resultAmount);
         }
         return guessedRate;
 }
