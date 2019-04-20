@@ -15,6 +15,11 @@ function si_calculate(principle, amountEnd){
         return si_result;
 }
 
+function si_rate_calculate(principle, yearNo, si){
+        si_rate_result = (si/(principle*yearNo));
+        return si_rate_result;
+}
+
 function foo() {
     console.clear();
     console.log("foo worked ... Yay ?");
@@ -33,8 +38,9 @@ function foo() {
         var r1 = r1_calculate(principle, interestYear);
         var r2 = r2_calculate(r1, noYears, principle);
         var si_total = si_calculate(principle, endAmount);
+        var si_total_rate = (principle, noYears, si_total);
         
-        $("#rate").val(r2.toFixed(6));
+        $("#rate").val(si_total_rate.toFixed(6));
         
         console.log("principle: " + principle);
         console.log("buying date: " + buyingDate);
@@ -46,7 +52,8 @@ function foo() {
         console.log("Returned Amount: " + endAmount);
         console.log("Rate 1: " +  r1.toFixed(6));
         console.log("Rate 2: " + r2.toFixed(6));
-        console.log("SI total " + si_total.toFixed(6)); 
+        console.log("SI total: " + si_total.toFixed(6)); 
+        console.log("SI rate: " + si_total_rate.toFixed(6));
     });
 }
 
