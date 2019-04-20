@@ -10,7 +10,7 @@ function r1_calculate(principle, interestYear){
 	return r1_result;
 }
 
-function si_calculate(principle, amountEnd){
+function i_calculate(principle, amountEnd){
         var si_result = amountEnd - principle;
         return si_result;
 }
@@ -37,7 +37,7 @@ function foo() {
         var endAmount = $("#endAmount").val();
         var r1 = r1_calculate(principle, interestYear);
         var r2 = r2_calculate(r1, noYears, principle);
-        var si_total = si_calculate(principle, endAmount);
+        var si_total = i_calculate(principle, endAmount);
         var si_total_rate = (principle, noYears, si_total);
         
         $("#rate").val(si_total_rate.toFixed(6));
