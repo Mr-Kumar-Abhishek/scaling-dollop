@@ -45,9 +45,9 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
         console.log("estimatedRate: ", + estimatedRate);
         while(resultAmount != amountEnd){
                 if( resultAmount < amountEnd){
-                        guessedRate = guessedRate + 0.0000000000000001;
+                        guessedRate = guessedRate++;
                 }else if(resultAmount > amountEnd){
-                        guessedRate = guessedRate - 0.0000000000000001;
+                        guessedRate = guessedRate--;
                 }else {
                         break;
                 }
