@@ -1,7 +1,7 @@
 /* global $ */
 
-function r2_calculate(r1, noYears, principle){
-        var r2_result = ((Math.pow((1/principle + 1), (1/noYears))) - 1 + r1);
+function r2_calculate(r1, noYears, principle, si){
+        var r2_result = ((Math.pow((si/principle + 1), (1/noYears))) - 1 + r1);
         return r2_result;
 }
 
@@ -85,8 +85,8 @@ function foo() {
         var interestYear = $("#interestYear").val();
         var endAmount = $("#endAmount").val();
         var r1 = r1_calculate(principle, interestYear);
-        var r2 = r2_calculate(r1, noYears, principle);
-       // var si_total = i_calculate(principle, endAmount);
+        var si_total = i_calculate(principle, endAmount);
+        var r2 = r2_calculate(r1, noYears, principle, si_total);
        // var si_total_rate = (principle, noYears, si_total);
        // var rate = guesser(principle, noYears, r2, interestYear, endAmount);
         var rate = r2;
