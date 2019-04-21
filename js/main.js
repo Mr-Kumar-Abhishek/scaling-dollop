@@ -63,7 +63,7 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 		yearInterest = yearInterest.toFixed(6);
 		amountEnd = amountEnd.toFixed(6);
                 console.log("current guessed rate: " + guessedRate);
-                resultAmount = compounder(principle, yearNo, guessedRate, yearInterest);
+                resultAmount = compounder(principle, yearNo, guessedRate, yearInterest).toFixed(6);
                 console.log("current resultAmount: ", + resultAmount);
                 console.log("amountEnd: ", + amountEnd);
         }
