@@ -35,7 +35,6 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 	yearInterest = parseFloat(yearInterest);
 	amountEnd = parseFloat(amountEnd);
         resultAmount = parseFloat(0);
-        guessedRate = parseFloat(1);
         
         guessedRate = guessedRate.toFixed(6);
         yearNo = yearNo.toFixed(6);
