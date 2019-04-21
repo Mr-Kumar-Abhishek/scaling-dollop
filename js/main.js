@@ -1,7 +1,7 @@
 /* global $ */
 
 function r2_calculate(r1, noYears, principle){
-        var r2_result = ((Math.pow((1/principle), (1/noYears))) - 1 + r1);
+        var r2_result = ((Math.pow((1/principle + 1), (1/noYears))) - 1 + r1);
         return r2_result;
 }
 
