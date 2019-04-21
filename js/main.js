@@ -86,9 +86,10 @@ function foo() {
         var endAmount = $("#endAmount").val();
         var r1 = r1_calculate(principle, interestYear);
         var r2 = r2_calculate(r1, noYears, principle);
-        var si_total = i_calculate(principle, endAmount);
-        var si_total_rate = (principle, noYears, si_total);
-        var rate = guesser(principle, noYears, r2, interestYear, endAmount);
+       // var si_total = i_calculate(principle, endAmount);
+       // var si_total_rate = (principle, noYears, si_total);
+       // var rate = guesser(principle, noYears, r2, interestYear, endAmount);
+        var rate = r2;
         var rate_percent = rate*100;
         
         $("#rate").val(rate_percent.toFixed(6));
@@ -103,8 +104,8 @@ function foo() {
         console.log("Returned Amount: " + endAmount);
         console.log("Rate 1: " +  r1.toFixed(6));
         console.log("Rate 2: " + r2.toFixed(6));
-        console.log("SI total: " + si_total.toFixed(6)); 
-        console.log("SI rate: " + si_total_rate.toFixed(6));
+       // console.log("SI total: " + si_total.toFixed(6)); 
+       // console.log("SI rate: " + si_total_rate.toFixed(6));
         console.log("Rate Percent: " + rate_percent.toFixed(6));
     });
 }
