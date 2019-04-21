@@ -30,12 +30,13 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
 
 function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 	/* Approximate to 6 decimal places */
-        guessedRate = Float64Array.from(estimatedRate);
-	yearNo = Float64Array.from(yearNo);
-	yearInterest = Float64Array.from(yearInterest);
-	amountEnd = Float64Array.from(amountEnd);
-        resultAmount = Float64Array.from(0);
-        guessedRate = Float64Array.from(1);
+        guessedRate = parseFloat(estimatedRate);
+	yearNo = parseFloat(yearNo);
+	yearInterest = parseFloat(yearInterest);
+	amountEnd = parseFloat(amountEnd);
+        resultAmount = parseFloat(0);
+        guessedRate = parseFloat(1);
+        
         guessedRate = guessedRate.toFixed(6);
         yearNo = yearNo.toFixed(6);
         yearInterest = yearInterest.toFixed(6);
@@ -52,11 +53,11 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
                 }
 		/* Approximate values in every guess loop */
                 
-                guessedRate = Float64Array.from(estimatedRate);
-                yearNo = Float64Array.from(yearNo);
-                yearInterest = Float64Array.from(yearInterest);
-                amountEnd = Float64Array.from(amountEnd);
-                guessedRate = Float64Array.from(guessedRate);
+                guessedRate = parseFloat(estimatedRate);
+                yearNo = parseFloat(yearNo);
+                yearInterest = parseFloat(yearInterest);
+                amountEnd = parseFloat(amountEnd);
+
 		guessedRate = guessedRate.toFixed(6);
 		yearNo = yearNo.toFixed(6);
 		yearInterest = yearInterest.toFixed(6);
