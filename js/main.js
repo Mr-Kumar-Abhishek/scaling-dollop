@@ -35,6 +35,7 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 	yearInterest = Float64Array.from(yearInterest);
 	amountEnd = Float64Array.from(amountEnd);
         resultAmount = Float64Array.from(0);
+        guessedRate = Float64Array.from(1);
         guessedRate = guessedRate.toFixed(6);
         yearNo = yearNo.toFixed(6);
         yearInterest = yearInterest.toFixed(6);
