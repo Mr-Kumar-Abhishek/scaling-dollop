@@ -31,6 +31,13 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
         for (i = 0; i < yearNo; i++){
                 console.log("i now: " + i);
                 
+                console.log("----------------------------------------");
+                console.log("compounded compounding: " + compounding);
+                console.log("compounded guessedRate: " + guessedRate);
+                console.log("compounded yearIntereset: " + yearInterest);
+                console.log("compounded yearNo: " + yearNo);
+                console.log("-----------------------------------------");
+                
                 compounding = ((compounding*guessedRate + compounding) - yearInterest); // bug ?
                 
                 console.log("compounding now: " + compounding);
