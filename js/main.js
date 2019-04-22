@@ -22,9 +22,18 @@ function si_rate_calculate(principle, yearNo, si){
 
 function compounder(principle, yearNo, guessedRate, yearInterest){
         var compounding = principle;
+        console.log("----------------------------------------");
+        console.log("compounder compounding: " + compounding);
+        console.log("compounder guessedRate: " + guessedRate);
+        console.log("compounder yearIntereset: " + yearInterest);
+        console.log("compounder yearNo: " + yearNo);
+        console.log("-----------------------------------------");
         for (i = 0; i < yearNo; i++){
+                console.log("i now: " + i);
+                
                 compounding = ((compounding*guessedRate + compounding) - yearInterest); // bug ?
         }
+        console.log("------------------------------------------");
         return compounding;
 }
 
