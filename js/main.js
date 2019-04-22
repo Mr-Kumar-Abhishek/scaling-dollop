@@ -30,11 +30,11 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
 
 function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 	/* Approximate to 6 decimal places */
-        guessedRate = parseFloat(estimatedRate);
+        guessedRate = parseFloat(estimatedRate).toFixed(6);
 	yearNo = parseFloat(yearNo);
-	yearInterest = parseFloat(yearInterest);
-	amountEnd = parseFloat(amountEnd);
-        resultAmount = parseFloat(0);
+	yearInterest = parseFloat(yearInterest).toFixed(6);
+	amountEnd = parseFloat(amountEnd).toFixed(6);
+        resultAmount = parseFloat(0).toFixed(6);
         
         guessedRate = guessedRate.toFixed(6);
         yearNo = yearNo.toFixed(6);
