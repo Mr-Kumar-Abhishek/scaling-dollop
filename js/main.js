@@ -42,6 +42,10 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
         amountEnd = amountEnd.toFixed(6);
 	
         console.log("estimatedRate: ", + estimatedRate);
+        resultAmount = parseFloat(compounder(principle, yearNo, guessedRate, yearInterest)).toFixed(6);
+        console.log("resultAmount: " + resultAmount);
+
+/*        
         while(resultAmount != amountEnd){
                 if( resultAmount < amountEnd){
                         guessedRate = guessedRate++;
@@ -50,8 +54,7 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
                 }else {
                         break;
                 }
-		/* Approximate values in every guess loop */
-                
+
                 guessedRate = parseFloat(estimatedRate);
                 yearNo = parseFloat(yearNo);
                 yearInterest = parseFloat(yearInterest);
@@ -65,7 +68,9 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
                 resultAmount = parseFloat(compounder(principle, yearNo, guessedRate, yearInterest)).toFixed(6);
                 console.log("current resultAmount: ", + resultAmount);
                 console.log("amountEnd: ", + amountEnd);
+
         }
+*/
         return guessedRate;
 }
 
