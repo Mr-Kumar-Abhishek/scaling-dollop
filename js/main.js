@@ -35,11 +35,6 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 	yearInterest = parseFloat(yearInterest).toFixed(6);
 	amountEnd = parseFloat(amountEnd).toFixed(6);
         resultAmount = parseFloat(0).toFixed(6);
-        
-        guessedRate = guessedRate.toFixed(6);
-        yearNo = yearNo.toFixed(6);
-        yearInterest = yearInterest.toFixed(6);
-        amountEnd = amountEnd.toFixed(6);
 	
         console.log("estimatedRate: ", + estimatedRate);
         resultAmount = parseFloat(compounder(principle, yearNo, guessedRate, yearInterest)).toFixed(6);
