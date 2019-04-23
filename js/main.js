@@ -35,8 +35,6 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
                 guessedRate = parseFloat(guessedRate).toFixed(6);
                 yearInterest = parseFloat(yearInterest).toFixed(6);
                 
-                console.log("i now: " + i);
-                
                 compounding = ((parseFloat(compounding)*parseFloat(guessedRate) + parseFloat(compounding)) - parseFloat(yearInterest));
                 
         }
