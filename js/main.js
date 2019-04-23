@@ -50,8 +50,6 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
         resultAmount = parseFloat(0).toFixed(6);
 	
         console.log("estimatedRate: ", + estimatedRate);
-        resultAmount = parseFloat(compounder(principle, yearNo, guessedRate, yearInterest)).toFixed(6);
-        console.log("resultAmount: " + resultAmount);
 
         while(resultAmount != amountEnd){
                 if( resultAmount < amountEnd){
