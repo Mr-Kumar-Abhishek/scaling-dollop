@@ -21,7 +21,13 @@ function si_rate_calculate(principle, yearNo, si){
 }
 
 function compounder(principle, yearNo, guessedRate, yearInterest){
+        principle = parseFloat(principle).toFixed(6);
+        yearNo = parseFloat(yearNo).toFixed(6);
+        guessedRate = parseFloat(guessedRate).toFixed(6);
+        yearInterest = parseFloat(yearInterest).toFixed(6);
+        
         var compounding = principle;
+        
         console.log("----------------------------------------");
         console.log("compounder compounding: " + compounding);
         console.log("compounder guessedRate: " + guessedRate);
@@ -29,6 +35,12 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
         console.log("compounder yearNo: " + yearNo);
         console.log("-----------------------------------------");
         for (i = 0; i < yearNo; i++){
+                
+                compounding = parseFloat(compounding).toFixed(6);
+                principle = parseFloat(principle).toFixed(6);
+                guessedRate = parseFloat(guessedRate).toFixed(6);
+                yearInterest = parseFloat(yearInterest).toFixed(6);
+                
                 console.log("i now: " + i);
                 
                 console.log("----------------------------------------");
@@ -38,7 +50,7 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
                 console.log("compounded yearNo: " + yearNo);
                 console.log("-----------------------------------------");
                 
-                compounding = ((compounding*guessedRate + compounding) - yearInterest); // bug ?
+                compounding = ((parseFloat(compounding)*parseFloat(guessedRate) + parseFloat(compounding)) - parseFloat(yearInterest)); // bug ?
                 
                 console.log("compounding now: " + compounding);
         }
