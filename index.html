@@ -97,12 +97,29 @@
 					</div>
 					<div class="col-md">
 						<div class="form-group">
-							<label for="rate">Rate of Return (in percent):</label>
+							<label for="rate">Initial Rate of Return (in percent):</label>
+							<input type="number" class="form-control" id="Init_rate" aria-describedby="rateHelp" placeholder="This will be calculated" disabled="disabled">
+							<small id="rateHelp" class="form-text text-muted">Calculation is done on your system, not on the cloud.</small>
+						</div>
+					</div>
+		</div>
+		<div class="row">
+					<div class="col-md">
+						<div class="form-group">
+							<label for="rate">Original Rate of Return (in percent):</label>
+							<input type="number" class="form-control" id="ori_rate" aria-describedby="rateHelp" placeholder="This will be calculated" disabled="disabled">
+							<small id="rateHelp" class="form-text text-muted">Calculation is done on your system, not on the cloud.</small>
+						</div>
+					</div>
+		
+					<div class="col-md">
+						<div class="form-group">
+							<label for="rate">Your Rate of Return (in percent):</label>
 							<input type="number" class="form-control" id="rate" aria-describedby="rateHelp" placeholder="This will be calculated" disabled="disabled">
 							<small id="rateHelp" class="form-text text-muted">Calculation is done on your system, not on the cloud.</small>
 						</div>
 					</div>
-				</div>
+		</div>
                 <button class="btn btn-primary btn-lg btn-block" id="calculate">Calculate</button>
 		<br>
             </form>
