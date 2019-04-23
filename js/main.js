@@ -51,11 +51,11 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 	
         console.log("estimatedRate: ", + estimatedRate);
 
-        while(resultAmount != amountEnd){
+        while(parseFloat(resultAmount).toFixed(5) != parseFloat(amountEnd).toFixed(5)){
                 if( resultAmount < amountEnd){
-                        guessedRate++;
+                        guessedRate = parseFloat(guessedRate) + 0.000001
                 }else if(resultAmount > amountEnd){
-                        guessedRate--;
+                        guessedRate  = parseFloat(guessedRate) - 0.000001;
                 }else {
                         break;
                 }
@@ -102,7 +102,7 @@ function foo() {
        // var rate = r2;
         var rate_percent = rate*100;
         
-        $("#rate").val(rate_percent.toFixed(6));
+        $("#rate").val(rate_percent.toFixed(4));
         
         console.log("principle: " + principle);
         console.log("buying date: " + buyingDate);
