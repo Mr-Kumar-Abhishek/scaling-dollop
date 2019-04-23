@@ -102,7 +102,7 @@ function foo() {
        // var rate = r2;
         var rate_percent = rate*100;
         
-        $("#rate").val(rate_percent.toFixed(4));
+        $("#Init_rate").val(rate_percent.toFixed(4));
         
         console.log("principle: " + principle);
         console.log("buying date: " + buyingDate);
