@@ -28,12 +28,6 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
         
         var compounding = principle;
         
-        console.log("----------------------------------------");
-        console.log("compounder compounding: " + compounding);
-        console.log("compounder guessedRate: " + guessedRate);
-        console.log("compounder yearIntereset: " + yearInterest);
-        console.log("compounder yearNo: " + yearNo);
-        console.log("-----------------------------------------");
         for (i = 0; i < yearNo; i++){
                 
                 compounding = parseFloat(compounding).toFixed(6);
@@ -43,18 +37,9 @@ function compounder(principle, yearNo, guessedRate, yearInterest){
                 
                 console.log("i now: " + i);
                 
-                console.log("----------------------------------------");
-                console.log("compounded compounding: " + compounding);
-                console.log("compounded guessedRate: " + guessedRate);
-                console.log("compounded yearIntereset: " + yearInterest);
-                console.log("compounded yearNo: " + yearNo);
-                console.log("-----------------------------------------");
+                compounding = ((parseFloat(compounding)*parseFloat(guessedRate) + parseFloat(compounding)) - parseFloat(yearInterest));
                 
-                compounding = ((parseFloat(compounding)*parseFloat(guessedRate) + parseFloat(compounding)) - parseFloat(yearInterest)); // bug ?
-                
-                console.log("compounding now: " + compounding);
         }
-        console.log("------------------------------------------");
         return compounding;
 }
 
