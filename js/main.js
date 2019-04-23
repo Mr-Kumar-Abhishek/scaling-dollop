@@ -53,9 +53,9 @@ function guesser(principle, yearNo, estimatedRate, yearInterest, amountEnd){
 
         while(resultAmount != amountEnd){
                 if( resultAmount < amountEnd){
-                        guessedRate = parseFloat(guessedRate)++;
+                        guessedRate++;
                 }else if(resultAmount > amountEnd){
-                        guessedRate = parseFloat(guessedRate)--;
+                        guessedRate--;
                 }else {
                         break;
                 }
